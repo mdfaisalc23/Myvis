@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-charcoal: #17191C;
+    --color-warm-white: #F7F6F2;
+    --color-concrete: #B8B8B3;
+    --color-bronze: #A58B68;
+    --color-deep-grey: #30343A;
+  }
+}
+
+/* Custom architectural blueprint and grid textures */
+.blueprint-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(165, 139, 104, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(165, 139, 104, 0.07) 1px, transparent 1px);
+}
+
+.blueprint-grid-dark {
+  background-size: 48px 48px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
+.technical-crosshair {
+  position: relative;
+}
+.technical-crosshair::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  width: 16px;
+  height: 16px;
+  border-top: 1px solid #A58B68;
+  border-left: 1px solid #A58B68;
+  opacity: 0.6;
+}
+.technical-crosshair::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  right: -8px;
+  width: 16px;
+  height: 16px;
+  border-bottom: 1px solid #A58B68;
+  border-right: 1px solid #A58B68;
+  opacity: 0.6;
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #17191C;
+}
+::-webkit-scrollbar-thumb {
+  background: #30343A;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A58B68;
+}
+
